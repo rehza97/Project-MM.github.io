@@ -222,6 +222,7 @@ aside .sidebar .message-count{
 
 main{
     margin-top: 1.4rem;
+    margin: 1rem auto;
 }
 main #profile {
     /*border: 1px solid #290883;*/
@@ -356,11 +357,13 @@ main .analyse .progresss .percentage{
 
 main .new-users{
     margin-top: 1.3rem;
+    height: 63vh;
+    width: 57vw;
+    border-radius: var(--card-border-radius);
 }
 
-main .new-users .user-list{
+main .new-users {
     background-color: var(--color-white);
-    padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
     box-shadow: var(--box-shadow);
@@ -370,10 +373,12 @@ main .new-users .user-list{
     gap: 1.4rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    height: 400px;
+
+    overflow: hidden;
+
 }
 
-main .new-users .user-list:hover{
+main .new-users:hover{
     box-shadow: none;
 }
 
@@ -568,6 +573,41 @@ main .new-users .user-list:hover{
 }
 
 
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  #next {
+    background: rgba(153, 153, 153, 0.438);
+    padding: 30% 3%;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    }
+  #prev {
+    background: rgba(153, 153, 153, 0.438);
+    padding: 30% 3%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    }
 
 @media screen and (max-width: 1200px) {
     .container{
