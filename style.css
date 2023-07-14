@@ -547,7 +547,7 @@ main .new-users .user-list:hover{
 }
 .prog-fill{
     height: 100%;
-    background-color: #91a03c;
+    background-color: yellow;
     transition: width 0.5s;
     
 
