@@ -537,6 +537,8 @@ main .new-users .user-list:hover{
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    background-color: gray;
+
 
 }
 .prog-title{
@@ -547,7 +549,7 @@ main .new-users .user-list:hover{
     height: 100%;
     background-color: #91a03c;
     transition: width 0.5s;
-    color: #;
+    
 
 
 }
@@ -556,6 +558,8 @@ main .new-users .user-list:hover{
     position: absolute;
     width: 100%;
     height: 100%;
+    color: white;
+    font-weight: 400;
     
 
     display: flex;
