@@ -19,15 +19,37 @@ darkMode.addEventListener('click', () => {
 })
 
 
-Orders.forEach(order => {
-    const tr = document.createElement('tr');
-    const trContent = `
-        <td>${order.productName}</td>
-        <td>${order.productNumber}</td>
-        <td>${order.paymentStatus}</td>
-        <td class="${order.status === 'Declined' ? 'danger' : order.status === 'Pending' ? 'warning' : 'primary'}">${order.status}</td>
-        <td class="primary">Details</td>
-    `;
-    tr.innerHTML = trContent;
-    document.querySelector('table tbody').appendChild(tr);
-});
+
+class Progbar{
+    constructor(element , InitVal = 0){
+        this.ValElem = element.querySelector('.prog-val')
+        this.FillElem = element.querySelector('.prog-fill')
+
+        this.setValue(InitVal);
+
+
+    }
+    setValue(newval){
+        if(newval <0){
+            newval=0
+        }else if(newval >100){
+            newval = 100
+        }
+        this.value = newval
+        this.update()
+
+    }
+
+    update(){
+        const percentage = this.value + '%'
+
+        this.FillElem.style.width = percentage
+        this.ValElem.textContent = percentage
+    }
+
+}
+
+ new Progbar(document.querySelector('.one'),74);
+ new Progbar(document.querySelector('.two'),4);
+ new Progbar(document.querySelector('.three'),20);
+ new Progbar(document.querySelector('.four'),54);

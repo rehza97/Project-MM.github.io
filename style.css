@@ -486,11 +486,81 @@ main .new-users .user-list:hover{
 .right-section .reminders .notification:hover{
     box-shadow: none;
 }
+.acount-info{
+    margin: 0.2rem 0.5rem;
+    display: flex;
+}
+
+.acount-info div {
+    display: flex;
+    /* margin: 1rem 1rem; */
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.acount-info div h4{
+    margin-right: 0.5rem ;
+}
 
 
+.acount-info div span{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.acount-info div span:hover{
+    background-color: var(--color-white);
+    flex-direction: column;
+
+}
+
+.desc{
+    max-width: 500px;
+    font-size: 1rem;
+    /* display: flex; */
+}
+.desc h4,p{
+    display: inline;
+}
+.all-prog {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    text-align: center;
+
+}
+
+.prog{
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+.prog-title{
+    /* margin-left: 5px; */
+    padding: 4px;
+}
+.prog-fill{
+    height: 100%;
+    background-color: gray;
+    transition: width 0.5s;
 
 
+}
 
+.prog-val{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #91a03c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
