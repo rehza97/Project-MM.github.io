@@ -219,8 +219,9 @@
                   <div class="swiper-slide">Slide 9</div>
                 </div>
                 <div class="flexx">
-
+                    <div class="next"></div>
                     <div class="swiper-button-next" id="next"></div>
+                    <div class="prev"></div>
                     <div class="swiper-button-prev" id="prev"></div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -270,12 +271,17 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
           cssMode: true,
+          loop : true,
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
           pagination: {
             el: ".swiper-pagination",
+          },
+          autoplay :{
+            delay : 15000 , 
+            disableOnInteraction: true,
           },
           mousewheel: true,
           keyboard: true,
