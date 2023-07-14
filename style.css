@@ -545,8 +545,9 @@ main .new-users .user-list:hover{
 }
 .prog-fill{
     height: 100%;
-    background-color: gray;
+    background-color: #91a03c;
     transition: width 0.5s;
+    color: #;
 
 
 }
@@ -555,7 +556,7 @@ main .new-users .user-list:hover{
     position: absolute;
     width: 100%;
     height: 100%;
-    color: #91a03c;
+    
 
     display: flex;
     align-items: center;
