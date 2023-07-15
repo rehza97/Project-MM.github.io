@@ -623,7 +623,7 @@ p {
   top: 0%;
   right: 0%;
   height: 100%;
-  width: 39%;
+  width: 10%;
   z-index: 2;
   transition: transform 0.3s ease; /* Adding a transition for smooth movement */
   /* background-color: red; */
@@ -637,19 +637,19 @@ p {
   top: 0%;
   left: 0%;
   height: 100%;
-  width: 39%;
+  width: 10%;
   z-index: 2;
   transition: transform 0.3s ease; /* Adding a transition for smooth movement */
   
 
 }
-.next:hover ~ #next {
+.nexte:hover ~ #nexte {
   transform: translateX(-100%); /* Move the element 100px to the right on hover*/
   transition: transform 0.3s ease; /* Adding a transition for smooth movement */
 
   /* right: 0%; */
 }
-.prev:hover ~ #prev {
+.preve:hover ~ #preve {
   transform: translateX(100%); /* Move the element 100px to the right on hover*/
   transition: transform 0.3s ease; /* Adding a transition for smooth movement */
 
