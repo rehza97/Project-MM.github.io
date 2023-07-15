@@ -460,7 +460,19 @@ main .new-users:hover {
 }
 
 .right-section .reminders {
-  margin-top: 2rem;
+  margin-top: 10rem;
+}
+.reminders .header h2{
+  margin-left: 1.5rem;
+
+}
+.reminders .header::before{
+    content: '';
+    background-color: red;
+    width: 0.5rem;
+    height: 2rem;
+    margin: 0rem;
+    position: absolute;
 }
 
 .right-section .reminders .header {
@@ -468,6 +480,8 @@ main .new-users:hover {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.8rem;
+  position: relative;
+  
 }
 
 .right-section .reminders .notification {
@@ -475,12 +489,15 @@ main .new-users:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
   padding: 1.4rem var(--card-padding);
   border-radius: var(--border-radius-2);
   box-shadow: var(--box-shadow);
   cursor: pointer;
   transition: all 0.3s ease;
+}
+.ads_three{
+  height: 14rem;
 }
 
 .right-section .reminders .notification:hover {
