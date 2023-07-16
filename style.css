@@ -466,7 +466,44 @@ main .new-users:hover {
 }
 
 .right-section .reminders {
-  margin-top: 10rem;
+  margin-top: 1rem;
+}
+.reminders .workers{
+  background-color: red;
+  border-radius: var(--border-radius-2);
+  padding: 0.5rem 0 !important;
+  display: block !important;
+  height: 17rem;
+  overflow-x: auto ;
+  cursor: default !important;
+
+}
+.workers .worker { 
+  display: flex;
+  /* border: 1px solid black; */
+  align-items: center;
+  margin: 1rem;
+  /* padding: 0.5rem 0.3rem ; */
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+}
+.workers .worker:hover {
+  color: var(--color-primary);
+  margin-left: 1.8rem;
+  
+}
+.workers .worker img{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+
+}
+.workers .worker .worker_info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+
 }
 .reminders .header h2{
   margin-left: 1.5rem;
@@ -503,7 +540,7 @@ main .new-users:hover {
   transition: all 0.3s ease;
 }
 .ads_three{
-  height: 15rem;
+  height: 12rem;
 }
 
 .right-section .reminders .notification:hover {
