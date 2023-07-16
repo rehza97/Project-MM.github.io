@@ -389,6 +389,7 @@ main .new-users:hover {
   flex-direction: row-reverse;
   margin-right: 1rem;
   justify-content: space-between;
+  align-items: center;
 }
 
 .right-section .nav button {
@@ -898,6 +899,7 @@ p {
     z-index: 2;
     box-shadow: 0 1rem 1rem var(--color-light);
     margin: 0;
+    
   }
 
   .right-section .nav .dark-mode {
