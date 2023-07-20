@@ -128,18 +128,41 @@ prev_class.addEventListener("mouseout", function (event) {
     next_class.style.display = "block";
   }
 });
+const outside = document.querySelector('.outside');
+outside.addEventListener('mousemove',()=>{
+  prev_id.style.transform = `translateX(-100%)`;
+  next_id.style.transform = `translateX(100%)`;
+})
 
-const btnEl = document.querySelector(".btn");
-const toggleOptions = () => {
-  const wrapperEl = document.querySelector(".wrapper");
-  const iconEl = btnEl.querySelector("i");
+const worker = document.querySelectorAll('.worker')
 
-  wrapperEl.classList.toggle("active");
+const observer = new IntersectionObserver(entries =>{
+  entries.forEach( entry =>{
+    entry.target.classList.toggle('show',entry.isIntersecting)
+   
+  },
+  {
+    threshold :2,
+  })
+  
+})
 
-  if (iconEl.classList.contains("ri-share-line")) {
-    iconEl.classList.replace("ri-share-line", "ri-close-line");
-  } else {
-    iconEl.classList.replace("ri-close-line", "ri-share-line");
-  }
-};
-btnEl.addEventListener("click", toggleOptions);
+worker.forEach(work => {
+  observer.observe(work)
+})
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollContainer = document.querySelector('.workers');
+  const content = document.querySelector('.worker');
+  const scrollLeftBtn = document.getElementById('scroll_up');
+  const scrollRightBtn = document.getElementById('scroll_down');
+
+  scrollLeftBtn.addEventListener('click', function () {
+    scrollContainer.scrollBy({ top: -50, behavior: 'smooth' }); // Adjust the scroll distance as needed
+  });
+
+  scrollRightBtn.addEventListener('click', function () {
+    scrollContainer.scrollBy({ top: 50, behavior: 'smooth' }); // Adjust the scroll distance as needed
+  });
+});

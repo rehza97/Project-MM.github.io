@@ -356,7 +356,7 @@ main .new-users {
   margin-top: 1.3rem;
   height: 63vh;
   width: 57vw;
-  border-radius: var(--card-border-radius);
+  border-radius: var(--border-radius-2) !important;
 }
 
 main .new-users {
@@ -476,7 +476,12 @@ main .new-users:hover {
   height: 17rem;
   overflow-x: auto ;
   cursor: default !important;
+  scrollbar-width: none;
+  position: relative;
 
+}
+.workers::-webkit-scrollbar{
+  display: none;
 }
 .workers .worker { 
   display: flex;
@@ -486,7 +491,33 @@ main .new-users:hover {
   /* padding: 0.5rem 0.3rem ; */
   transition: all 0.3s ease;
   cursor: pointer;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 150ms;
 
+}
+.scroll_up , .scroll_down{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(202, 98, 98);
+  border-radius: 50% ;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  right: 2%;
+  z-index: 2;
+}
+.scroll_down{
+  bottom: 56%;
+}
+.scroll_up{
+  top: 9%;
+  rotate: 180deg;
+}
+.show{
+  transform: translateX(0px) !important;
+  opacity: 1 !important;
 }
 .workers .worker:hover {
   color: var(--color-primary);
@@ -673,6 +704,16 @@ p {
 
 
 }
+
+
+.outside{
+  position: absolute;
+  width: 60%;
+  height: 70.5%;
+  top: 29%;
+  z-index: 0;
+}
+
 .prev {
     /* background-color: red; */
   padding: 30% 3%;
