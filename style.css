@@ -477,8 +477,11 @@ main .new-users:hover {
   overflow-x: auto ;
   cursor: default !important;
   scrollbar-width: none;
-  position: relative;
+  position: relative !important;
 
+}
+.workers .scroll_btn{
+  position: fixed;
 }
 .workers::-webkit-scrollbar{
   display: none;
@@ -496,6 +499,7 @@ main .new-users:hover {
   transition: 150ms;
 
 }
+
 .scroll_up , .scroll_down{
   display: flex;
   align-items: center;
@@ -504,14 +508,16 @@ main .new-users:hover {
   border-radius: 50% ;
   width: 25px;
   height: 25px;
-  position: fixed;
-  right: 2%;
   z-index: 2;
 }
 .scroll_down{
+  position: fixed;
+  right: 2%;
   bottom: 56%;
 }
 .scroll_up{
+  position: fixed;
+  right: 2%;
   top: 9%;
   rotate: 180deg;
 }
