@@ -128,41 +128,81 @@ prev_class.addEventListener("mouseout", function (event) {
     next_class.style.display = "block";
   }
 });
-const outside = document.querySelector('.outside');
-outside.addEventListener('mousemove',()=>{
+const outside = document.querySelector(".outside");
+outside.addEventListener("mousemove", () => {
   prev_id.style.transform = `translateX(-100%)`;
   next_id.style.transform = `translateX(100%)`;
-})
+});
 
-const worker = document.querySelectorAll('.worker')
+const worker = document.querySelectorAll(".worker");
 
-const observer = new IntersectionObserver(entries =>{
-  entries.forEach( entry =>{
-    entry.target.classList.toggle('show',entry.isIntersecting)
-   
-  },
-  {
-    threshold :2,
-  })
-  
-})
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(
+    (entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    },
+    {
+      threshold: 2,
+    }
+  );
+});
 
-worker.forEach(work => {
-  observer.observe(work)
-})
+worker.forEach((work) => {
+  observer.observe(work);
+});
 
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollContainer = document.querySelector(".workers");
+  const content = document.querySelector(".worker");
+  const scrollLeftBtn = document.getElementById("scroll_up");
+  const scrollRightBtn = document.getElementById("scroll_down");
 
-document.addEventListener('DOMContentLoaded', function () {
-  const scrollContainer = document.querySelector('.workers');
-  const content = document.querySelector('.worker');
-  const scrollLeftBtn = document.getElementById('scroll_up');
-  const scrollRightBtn = document.getElementById('scroll_down');
-
-  scrollLeftBtn.addEventListener('click', function () {
-    scrollContainer.scrollBy({ top: -50, behavior: 'smooth' }); // Adjust the scroll distance as needed
+  scrollLeftBtn.addEventListener("click", function () {
+    scrollContainer.scrollBy({ top: -50, behavior: "smooth" }); // Adjust the scroll distance as needed
   });
 
-  scrollRightBtn.addEventListener('click', function () {
-    scrollContainer.scrollBy({ top: 50, behavior: 'smooth' }); // Adjust the scroll distance as needed
+  scrollRightBtn.addEventListener("click", function () {
+    scrollContainer.scrollBy({ top: 50, behavior: "smooth" }); // Adjust the scroll distance as needed
   });
+});
+
+const follower = document.querySelector(".stat-1");
+const follow = document.querySelector("#follow_btn");
+const stat = "true";
+
+const like = document.querySelector(".stat-2");
+const like_btn = document.querySelector("#like_btn");
+
+const rev = document.querySelector(".stat-3");
+const rev_btn = document.querySelector("#rev_btn");
+
+follow.addEventListener("click", () => {
+  follower.classList.toggle("follow");
+  follower.classList.toggle("true");
+  if (follower.classList.contains(stat)) {
+    follow.innerHTML = `<span class="material-symbols-sharp">remove</span>`;
+  } else {
+    follow.innerHTML = `<span class="material-symbols-sharp">add</span>`;
+    follower.classList.replace("follow", "unfollow");
+  }
+});
+like.addEventListener("click", () => {
+  like.classList.toggle("like");
+  like.classList.toggle("true");
+  if (like.classList.contains(stat)) {
+    like_btn.innerHTML = `<span class="material-symbols-sharp">remove</span>`;
+  } else {
+    like_btn.innerHTML = `<span class="material-symbols-sharp">add</span>`;
+    like.classList.replace("follow", "unfollow");
+  }
+});
+rev.addEventListener("click", () => {
+  rev.classList.toggle("rev");
+  rev.classList.toggle("true");
+  if (rev.classList.contains(stat)) {
+    rev_btn.innerHTML = `<span class="material-symbols-sharp">remove</span>`;
+  } else {
+    rev_btn.innerHTML = `<span class="material-symbols-sharp">add</span>`;
+    rev_btn.classList.replace("follow", "unfollow");
+  }
 });
